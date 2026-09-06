@@ -2,7 +2,7 @@ import { BrandModelInfo, CustomerReview, FAQItem, RepairIssue, TrackingRecord } 
 
 export const SHOP_INFO = {
   ownerName: "Naveen Kumar Vijay",
-  businessName: "Vijay Mobile Care",
+  businessName: "BALAJI MOBILE",
   shortAddress: "B-35, Raisar Plaza, Ajmeri Gate, Jaipur",
   fullAddress: "Shop No. B-35, Raisar Plaza, Near Ajmeri Gate, Jaipur, Rajasthan - 302003",
   pincode: "302003",
@@ -314,7 +314,11 @@ export const FAQS: FAQItem[] = [
 ];
 
 export const SEO_KEYWORD_TAGS = [
-  "Mobile repair Raisar Plaza Jaipur",
+  "BALAJI MOBILE Jaipur",
+  "BALAJI MOBILE Raisar Plaza",
+  "Mobile repair in Jaipur",
+  "Mobile repair near me",
+  "Best mobile repair Raisar Plaza",
   "Naveen Kumar Vijay mobile technician",
   "Best iPhone repair in Jaipur",
   "Samsung curved display repair Jaipur",

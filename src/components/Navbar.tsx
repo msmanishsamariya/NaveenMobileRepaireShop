@@ -64,11 +64,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onOpenTracker }) 
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-xl font-extrabold tracking-tight text-slate-900 group-hover:text-blue-700 transition-colors">
-                  Vijay Mobile Care
+                <span className="text-xl font-extrabold tracking-tight text-slate-900 group-hover:text-blue-700 transition-colors uppercase">
+                  BALAJI MOBILE
                 </span>
                 <span className="text-[10px] font-semibold tracking-wider uppercase bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full border border-blue-200">
-                  Raisar Plaza
+                  Shop B-35 Raisar
                 </span>
               </div>
               <p className="text-xs text-slate-500 font-medium">

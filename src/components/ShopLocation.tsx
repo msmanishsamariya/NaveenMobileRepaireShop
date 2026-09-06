@@ -16,7 +16,7 @@ export const ShopLocation: React.FC = () => {
   const handleShareLocation = () => {
     if (navigator.share) {
       navigator.share({
-        title: 'Vijay Mobile Care - Shop B-35 Raisar Plaza Jaipur',
+        title: 'BALAJI MOBILE - Shop B-35 Raisar Plaza Jaipur',
         text: `Visit Naveen Kumar Vijay for expert mobile repair at: ${SHOP_INFO.fullAddress}. Phone: ${SHOP_INFO.phone}`,
         url: SHOP_INFO.googleMapsUrl,
       }).catch(() => {});
@@ -56,8 +56,8 @@ export const ShopLocation: React.FC = () => {
                   <span className="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md border border-amber-200">
                     Physical Storefront
                   </span>
-                  <h3 className="text-2xl font-bold text-slate-900 mt-2">
-                    Vijay Mobile Care
+                  <h3 className="text-2xl font-bold text-slate-900 mt-2 uppercase">
+                    BALAJI MOBILE
                   </h3>
                   <p className="text-sm font-semibold text-slate-600">
                     Naveen Kumar Vijay (Owner & Chief Technician)
@@ -178,7 +178,7 @@ export const ShopLocation: React.FC = () => {
                 <li><strong>From Railway Station:</strong> 10 mins drive via Station Road to Ajmeri Gate / MI Road.</li>
                 <li><strong>From Sindhi Camp Bus Stand:</strong> 7 mins by auto-rickshaw or e-rickshaw.</li>
                 <li><strong>By Metro:</strong> De-board at Chandpole or Chhoti Chaupar Metro Station (5 mins walk).</li>
-                <li><strong>Inside Raisar Plaza:</strong> Take stairs to Basement Floor, locate Shop B-35 (Vijay Mobile Care). Call Naveen ji if you need guidance.</li>
+                <li><strong>Inside Raisar Plaza:</strong> Take stairs to Basement Floor, locate Shop B-35 (BALAJI MOBILE). Call Naveen ji if you need guidance.</li>
               </ul>
             </div>
 
@@ -390,7 +390,7 @@ export const ShopLocation: React.FC = () => {
                 <div>
                   <h4 className="font-bold text-slate-900 text-sm">Basement Level • Shop B-35</h4>
                   <p className="text-xs text-slate-600 mt-1">
-                    Walk down into the electronics repair lane to locate Vijay Mobile Care at Shop B-35.
+                    Walk down into the electronics repair lane to locate BALAJI MOBILE at Shop B-35.
                   </p>
                 </div>
                 <div className="mt-3 pt-2.5 border-t border-slate-200 flex items-center justify-between text-[11px] text-slate-500">

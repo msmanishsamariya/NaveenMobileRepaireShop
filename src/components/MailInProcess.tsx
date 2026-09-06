@@ -200,7 +200,7 @@ export const MailInProcess: React.FC<MailInProcessProps> = () => {
                     </div>
                   </div>
                   <div className="font-mono text-sm leading-relaxed select-all flex-1">
-                    <p className="font-bold text-amber-300 text-base">To: Naveen Kumar Vijay (Vijay Mobile Care)</p>
+                    <p className="font-bold text-amber-300 text-base">To: Naveen Kumar Vijay (BALAJI MOBILE)</p>
                     <p className="text-slate-100">Shop No. B-35, Raisar Plaza, Ajmeri Gate</p>
                     <p className="text-slate-100">Jaipur, Rajasthan, India - 302003</p>
                     <p className="text-slate-300 mt-2 font-sans font-semibold text-xs">
@@ -522,8 +522,8 @@ export const MailInProcess: React.FC<MailInProcessProps> = () => {
                       <span className="text-xs font-mono font-bold uppercase bg-slate-900 text-white px-2.5 py-1 rounded">
                         PRIORITY REPAIR PARCEL
                       </span>
-                      <h2 className="text-2xl font-black text-slate-900 mt-2">
-                        VIJAY MOBILE CARE - RAISAR PLAZA
+                      <h2 className="text-2xl font-black text-slate-900 mt-2 uppercase">
+                        BALAJI MOBILE - RAISAR PLAZA
                       </h2>
                       <p className="text-xs text-slate-600 font-medium">
                         Prop: Naveen Kumar Vijay • 15+ Yrs Mobile Repair Specialist

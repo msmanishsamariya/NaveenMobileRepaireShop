@@ -60,8 +60,8 @@ export const Footer: React.FC = () => {
               <div className="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold">
                 <Wrench className="w-4 h-4 text-amber-300" />
               </div>
-              <span className="text-base font-extrabold text-white tracking-tight">
-                Vijay Mobile Care
+              <span className="text-base font-extrabold text-white tracking-tight uppercase">
+                BALAJI MOBILE
               </span>
             </div>
             <p className="text-slate-400 leading-relaxed">
@@ -136,7 +136,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="mt-10 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500">
           <p>
-            © {new Date().getFullYear()} Vijay Mobile Care (Naveen Kumar Vijay). All rights reserved. Raisar Plaza, Jaipur.
+            © {new Date().getFullYear()} BALAJI MOBILE (Naveen Kumar Vijay). All rights reserved. Raisar Plaza, Jaipur.
           </p>
           <div className="flex items-center gap-4">
             <span className="text-[11px]">iPhone, Samsung, OnePlus & Android are trademarks of their respective owners.</span>

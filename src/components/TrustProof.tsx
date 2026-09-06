@@ -68,7 +68,7 @@ export const TrustProof: React.FC = () => {
             <div className="relative shrink-0">
               <img
                 src={naveenImg || '/naveen.jpg'}
-                alt="Naveen Kumar Vijay - Proprietor of Vijay Mobile Care"
+                alt="Naveen Kumar Vijay - Proprietor of BALAJI MOBILE"
                 className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl object-cover object-[center_18%] border-4 border-amber-400 shadow-2xl bg-slate-800"
                 referrerPolicy="no-referrer"
                 loading="lazy"
@@ -92,7 +92,7 @@ export const TrustProof: React.FC = () => {
                 "Your Phone Stays Directly In My Hands."
               </h3>
               <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-3xl">
-                “When you walk into Shop B-35 or courier your smartphone from any corner of India, your phone does not get handed off to untrained third parties. I personally diagnose the micro-circuitry under the microscope, keep your private data safe, and record video explanations before any repair. That is the 15-year reputation of Vijay Mobile Care at Raisar Plaza.”
+                “When you walk into Shop B-35 or courier your smartphone from any corner of India, your phone does not get handed off to untrained third parties. I personally diagnose the micro-circuitry under the microscope, keep your private data safe, and record video explanations before any repair. That is the 15-year reputation of BALAJI MOBILE at Raisar Plaza.”
               </p>
               <div className="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-4 text-xs font-semibold text-slate-400">
                 <span className="text-amber-400">— Naveen Kumar Vijay</span>

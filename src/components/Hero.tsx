@@ -48,7 +48,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenTracker }) => {
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
-              Expert Mobile Repair in{' '}
+              <span className="block text-amber-400 text-lg sm:text-2xl font-bold uppercase tracking-wider mb-2 font-mono">
+                BALAJI MOBILE
+              </span>
+              #1 Mobile Repair in{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-amber-300">
                 Raisar Plaza, Jaipur
               </span>{' '}
