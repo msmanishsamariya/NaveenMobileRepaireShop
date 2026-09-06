@@ -67,13 +67,14 @@ export const TrustProof: React.FC = () => {
           <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
             <div className="relative shrink-0">
               <img
-                src={naveenImg}
+                src={naveenImg || '/naveen.jpg'}
                 alt="Naveen Kumar Vijay - Proprietor of Vijay Mobile Care"
-                className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl object-cover object-top border-4 border-amber-400 shadow-2xl"
+                className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl object-cover object-[center_18%] border-4 border-amber-400 shadow-2xl bg-slate-800"
                 referrerPolicy="no-referrer"
+                loading="lazy"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  if (!target.src.includes('naveen.jpg')) target.src = '/naveen.jpg';
+                  if (!target.src.endsWith('/naveen.jpg')) target.src = '/naveen.jpg';
                 }}
               />
               <div className="absolute -bottom-2 -right-2 bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full border-2 border-slate-900 shadow-xs flex items-center gap-1">

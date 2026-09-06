@@ -5,6 +5,7 @@ import { naveenImg, raisarPlazaImg, shopCorridorImg } from '../assets/images';
 
 export const ShopLocation: React.FC = () => {
   const [copied, setCopied] = useState(false);
+  const [mapMode, setMapMode] = useState<'pin' | 'directions'>('pin');
 
   const handleCopy = () => {
     navigator.clipboard.writeText(SHOP_INFO.fullAddress);
@@ -64,13 +65,14 @@ export const ShopLocation: React.FC = () => {
                 </div>
                 <div className="relative shrink-0">
                   <img
-                    src={naveenImg}
+                    src={naveenImg || '/naveen.jpg'}
                     alt="Naveen Kumar Vijay"
-                    className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl object-cover border-2 border-amber-400 shadow-md"
+                    className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl object-cover object-[center_18%] border-2 border-amber-400 shadow-md bg-slate-800"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
-                      if (!target.src.includes('naveen.jpg')) target.src = '/naveen.jpg';
+                      if (!target.src.endsWith('/naveen.jpg')) target.src = '/naveen.jpg';
                     }}
                   />
                   <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full" title="In Shop" />
@@ -185,12 +187,37 @@ export const ShopLocation: React.FC = () => {
           {/* Right: Interactive / Visual Map Embed Area */}
           <div className="lg:col-span-6 flex flex-col">
             <div className="bg-white rounded-3xl border border-slate-200 p-4 shadow-md flex-1 flex flex-col overflow-hidden">
-              <div className="flex items-center justify-between pb-3 px-2 border-b border-slate-100 mb-3">
+              <div className="flex flex-wrap items-center justify-between pb-3 px-2 border-b border-slate-100 mb-3 gap-2">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
+                  <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse shrink-0" />
                   <span className="text-xs font-bold text-slate-800">
-                    Live Map Location: Raisar Plaza, Ajmeri Gate
+                    Raisar Plaza, Ajmeri Gate
                   </span>
+                  {/* Mode switcher pills */}
+                  <div className="inline-flex rounded-lg bg-slate-100 p-0.5 text-[11px] font-semibold">
+                    <button
+                      type="button"
+                      onClick={() => setMapMode('pin')}
+                      className={`px-2 py-1 rounded-md transition-all cursor-pointer ${
+                        mapMode === 'pin'
+                          ? 'bg-white text-blue-700 shadow-xs font-bold'
+                          : 'text-slate-600 hover:text-slate-900'
+                      }`}
+                    >
+                      📍 Landmark Pin
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setMapMode('directions')}
+                      className={`px-2 py-1 rounded-md transition-all cursor-pointer ${
+                        mapMode === 'directions'
+                          ? 'bg-white text-blue-700 shadow-xs font-bold'
+                          : 'text-slate-600 hover:text-slate-900'
+                      }`}
+                    >
+                      🧭 Route Directions
+                    </button>
+                  </div>
                 </div>
                 <a
                   id="shop-map-get-directions-header-btn"
@@ -225,7 +252,12 @@ export const ShopLocation: React.FC = () => {
                 <iframe
                   id="raisar-plaza-map-iframe"
                   title="Raisar Plaza Ajmeri Gate Jaipur Map Location Pin"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.623190875429!2d75.81432177613608!3d26.918630976644026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db6aa2dc91a7b%3A0xbce5c79e6727282a!2sRaisar%20Plaza!5e0!3m2!1sen!2sin!4v1725600000000!5m2!1sen!2sin"
+                  key={mapMode}
+                  src={
+                    mapMode === 'directions'
+                      ? 'https://maps.google.com/maps?daddr=Raisar+Plaza,+Ajmeri+Gate,+Jaipur&output=embed'
+                      : 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.623190875429!2d75.81432177613608!3d26.918630976644026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db6aa2dc91a7b%3A0xbce5c79e6727282a!2sRaisar%20Plaza!5e0!3m2!1sen!2sin!4v1725600000000!5m2!1sen!2sin'
+                  }
                   className="w-full h-full border-0 absolute inset-0"
                   loading="lazy"
                   allow="geolocation"
@@ -278,13 +310,14 @@ export const ShopLocation: React.FC = () => {
             <div className="group rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-xs flex flex-col">
               <div className="relative h-64 overflow-hidden bg-slate-200">
                 <img
-                  src={naveenImg}
+                  src={naveenImg || '/naveen.jpg'}
                   alt="Naveen Kumar Vijay - Proprietor"
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-[center_18%] group-hover:scale-105 transition-transform duration-500 bg-slate-800"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    if (!target.src.includes('naveen.jpg')) target.src = '/naveen.jpg';
+                    if (!target.src.endsWith('/naveen.jpg')) target.src = '/naveen.jpg';
                   }}
                 />
                 <div className="absolute top-3 left-3 bg-amber-500 text-slate-950 text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">

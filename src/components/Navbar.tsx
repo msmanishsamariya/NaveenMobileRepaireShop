@@ -48,15 +48,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onOpenTracker }) 
         <div className="flex items-center justify-between h-20">
           {/* Brand Logo & Name */}
           <a id="brand-logo" href="#" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 rounded-xl overflow-hidden border-2 border-blue-600 shadow-md shadow-blue-500/15 group-hover:scale-105 transition-transform shrink-0">
+            <div className="relative w-12 h-12 rounded-xl overflow-hidden border-2 border-amber-400 shadow-md shadow-amber-500/15 group-hover:scale-105 transition-transform shrink-0 bg-slate-800">
               <img
-                src={naveenImg}
+                src={naveenImg || '/naveen.jpg'}
                 alt="Naveen Kumar Vijay"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-[center_18%]"
                 referrerPolicy="no-referrer"
+                loading="eager"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  if (!target.src.includes('naveen.jpg')) target.src = '/naveen.jpg';
+                  if (!target.src.endsWith('/naveen.jpg')) target.src = '/naveen.jpg';
                 }}
               />
               <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border border-white rounded-full" />

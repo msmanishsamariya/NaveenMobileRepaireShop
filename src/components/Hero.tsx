@@ -60,13 +60,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenTracker }) => {
               <div className="relative shrink-0">
                 <img
                   id="hero-naveen-photo"
-                  src={naveenImg}
+                  src={naveenImg || '/naveen.jpg'}
                   alt="Naveen Kumar Vijay - Master Mobile Technician"
-                  className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl object-cover border-2 border-amber-400 shadow-md"
+                  className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl object-cover object-[center_18%] border-2 border-amber-400 shadow-md bg-slate-800"
                   referrerPolicy="no-referrer"
+                  loading="eager"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    if (!target.src.includes('naveen.jpg')) {
+                    if (!target.src.endsWith('/naveen.jpg')) {
                       target.src = '/naveen.jpg';
                     }
                   }}
