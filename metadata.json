@@ -1,0 +1,6 @@
+{
+  "name": "Vijay Mobile Repair - Raisar Plaza Jaipur",
+  "description": "Expert mobile phone repair by Naveen Kumar Vijay with 15+ years experience. iPhone, Samsung, Android & chip-level motherboard repair in Raisar Plaza, Jaipur. All-India courier mail-in service.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
